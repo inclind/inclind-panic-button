@@ -36,5 +36,8 @@
 ehthumbs.db
 Thumbs.db
 
+# Build Files
+node_modules/
+
 # VSCode
 .vscode/settings.json
