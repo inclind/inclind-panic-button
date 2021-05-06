@@ -8,13 +8,13 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://www.inclind.com/
+ * @link              https://github.com/inclind/inclind-panic-button
  * @since             1.0.0
  * @package           Inclind_Panic_Button
  *
  * @wordpress-plugin
  * Plugin Name:       Inclind Panic Button
- * Plugin URI:        https://www.inclind.com/
+ * Plugin URI:        https://github.com/inclind/inclind-panic-button
  * Description:       Creates an [inclind-panic-button] shortcode for use in Elementor and others.
  * Version:           1.0.0
  * Author:            Carson Schulz
