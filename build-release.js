@@ -57,11 +57,10 @@ archive.directory('includes', packageNameDir + 'includes');
 archive.directory('languages', packageNameDir + 'languages');
 archive.directory('public', packageNameDir + 'public');
 
-archive.file( packageNameDir + 'inclind-panic-button.php' );
-archive.file( packageNameDir + 'index.php' );
-archive.file( packageNameDir + 'LICENSE.txt' );
-archive.file( packageNameDir + 'README.txt' );
-archive.file( packageNameDir + 'uninstall.php' );
+archive.file('inclind-panic-button.php', { name: packageNameDir + 'inclind-panic-button.php' });
+archive.file('index.php', { name: packageNameDir + 'index.php' });
+archive.file('README.txt', { name: packageNameDir + 'README.txt' });
+archive.file('uninstall.php', { name: packageNameDir + 'uninstall.php' });
 
 
 // finalize the archive (ie we are done appending files but streams have to finish yet)
