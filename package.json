@@ -4,6 +4,9 @@
   "description": "Creates an [inclind-panic-button] shortcode for use in Elementor and others.",
   "main": "gulpfile.js",
   "scripts": {
+    "build:css": "gulp build:css",
+    "build:js": "gulp build:js",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
