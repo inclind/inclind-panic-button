@@ -24,9 +24,6 @@
 		document.body.className = ""; // All classes
 		document.title = '500 Server Error';
 
-
-		console.log(document.head)
-
 		// Start the redirect
 		inclindPanicBtnRedirect(redirectUrl);
 
