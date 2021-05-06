@@ -6,8 +6,8 @@
   "scripts": {
     "build:css": "gulp build:css",
     "build:js": "gulp build:js",
-    "watch": "gulp watch",
-    "build:zip": "node build-release.js"
+    "build:zip": "node build-release.js",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
