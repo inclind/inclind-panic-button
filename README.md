@@ -15,21 +15,9 @@ This plugin will generate a shortcode `[inclind-panic-button]` that can be place
 
 ## Configuration
 
-There are a number of arguments that can be passed to the shortcode
+Main configuration can be found in the WordPress settings menu under ``Settings > Panic Button``.
 
-### Text
-
-Custom button text can be provided with:
-```
-[inclind-panic-button text="My Custom Button Text"]
-```
-
-### Redirect URL
-
-To give a custom redirect url (default is Google)
-```
-[inclind-panic-button location="www.example.com"]
-```
+There are a number of arguments that can be passed to the shortcode for styling of the main button
 
 ### Classes
 
