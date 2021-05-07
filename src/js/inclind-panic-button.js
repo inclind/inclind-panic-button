@@ -1,11 +1,18 @@
 (function() {
 	// Wait for the content to load
 	document.addEventListener('DOMContentLoaded', () => {
+		// Two buttons
 		var inclindPanicBtn = document.getElementById("inclind-panic-button");
+		var inclindPanicBtnFixed = document.getElementById("inclind-panic-button-fixed");
 
 		// If button exists
 		if ( inclindPanicBtn ) {
 			inclindPanicBtn.addEventListener( 'click', inclindPanicBtnDriver );
+		}
+
+		// If fixed button exists
+		if ( inclindPanicBtnFixed ) {
+			inclindPanicBtnFixed.addEventListener( 'click', inclindPanicBtnDriver );
 		}
 	});
 

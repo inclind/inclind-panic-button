@@ -99,7 +99,7 @@ class Inclind_Panic_Button_Admin {
 		// Button toggle field
 		add_settings_field(
 			'inclind_panic_button_show_fixed',
-			'Show Button',
+			'Show Fixed Button',
 			[$this, 'button_fixed_field'],
 			'inclind_panic_button',
 			'inclind_panic_button_entry_section'

@@ -63,7 +63,6 @@ class Inclind_Panic_Button_Public {
 
 		// Get the options from the settings page
 		$settings = get_option( 'inclind_panic_button_settings' );
-		var_dump( $settings );
 
 		// Default values
 		$text = __( 'Exit', 'inclind-panic-button' );
@@ -118,6 +117,41 @@ class Inclind_Panic_Button_Public {
 
 		// Send the button
 		return "<button id=\"inclind-panic-button\" class=\"$classes_str\" data-redirect-url=\"$redirect_url\">$text</button>";
+	}
+
+	/**
+	 * Outputs a fixed button if so defined
+	 *
+	 * @since    1.0.0
+	 */
+	public function create_button() {
+
+		// Get the plugin settings
+		$settings = get_option( 'inclind_panic_button_settings' );
+
+		// Custom button text?
+		if ( array_key_exists( 'inclind_panic_button_text', $settings) && $settings['inclind_panic_button_text'] ) {
+			$button_text = $settings['inclind_panic_button_text'];
+		} else {
+			$button_text = __( 'Exit', 'inclind-panic-button' );
+		}
+
+		// Custom redirect URL?
+		if ( array_key_exists( 'inclind_panic_button_url_field', $settings) && $settings['inclind_panic_button_url_field'] ) {
+			$redirect_url = $settings['inclind_panic_button_url_field'];
+		} else {
+			$redirect_url = 'https://www.google.com';
+		}
+
+		// Check to see if we can show the button
+		if ( array_key_exists( 'inclind_panic_button_show_fixed', $settings) && $settings['inclind_panic_button_show_fixed'] ) {
+
+			// Icon
+			$alert_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="transform:;-ms-filter:"><path d="M12.884,2.532c-0.346-0.654-1.422-0.654-1.768,0l-9,17c-0.164,0.31-0.154,0.684,0.027,0.983C2.324,20.816,2.649,21,3,21h18 c0.351,0,0.676-0.184,0.856-0.484c0.182-0.3,0.191-0.674,0.027-0.983L12.884,2.532z M13,18h-2v-2h2V18z M11,14V9h2l0.001,5H11z"></path></svg>';
+
+			// Print the button
+			printf( '<button class="inclind-panic-button-fixed" id="inclind-panic-button-fixed" data-redirect-url="%s">%s %s</button>',  $redirect_url, $alert_icon, $button_text );
+		}
 	}
 
 

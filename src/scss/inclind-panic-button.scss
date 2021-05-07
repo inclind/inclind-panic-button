@@ -1,0 +1,35 @@
+// Fixed button
+.inclind-panic-button-fixed {
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	z-index: 2000;
+	display: flex;
+	align-items: center;
+	padding: 0.4rem 1.5rem;
+	border: 1px solid lighten(#d32f2f, 5%);
+	border-radius: 1rem;
+	font-size: 20px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: 500;
+	background-color: #d32f2f;
+	color: #ffffff;
+	cursor: pointer;
+	transition: background-color 200ms ease-in-out;
+
+	&:focus,
+	&:hover {
+		background-color: darken(#d32f2f, 5%);
+	}
+
+	svg {
+		fill: #ffffff;
+		margin-right: 10px;
+	}
+
+	@media (min-width: 768px) {
+		right: 2rem;
+		bottom: 2rem;
+	}
+}

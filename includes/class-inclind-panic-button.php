@@ -173,6 +173,9 @@ class Inclind_Panic_Button {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
+		// Create the fixed button if needed
+		$this->loader->add_action( 'wp_footer', $plugin_public, 'create_button' );
+
 		// Create the shortcode
 		add_shortcode( 'inclind-panic-button', array( $plugin_public, 'create_shortcode' ) );
 
