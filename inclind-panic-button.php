@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              https://github.com/inclind/inclind-panic-button
- * @since             1.0.0
+ * @since             1.0.1
  * @package           Inclind_Panic_Button
  *
  * @wordpress-plugin
  * Plugin Name:       Inclind Panic Button
  * Plugin URI:        https://github.com/inclind/inclind-panic-button
  * Description:       Creates an [inclind-panic-button] shortcode for use in Elementor and others.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Carson Schulz
  * Author URI:        https://www.inclind.com/
  * License:           GPL-2.0+
@@ -32,10 +32,10 @@ if ( ! defined( 'WPINC' ) ) {
 
 /**
  * Currently plugin version.
- * Start at version 1.0.0 and use SemVer - https://semver.org
+ * Start at version 1.0.1 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'INCLIND_PANIC_BUTTON_VERSION', '1.0.0' );
+define( 'INCLIND_PANIC_BUTTON_VERSION', '1.0.1' );
 
 /**
  * The code that runs during plugin activation.
@@ -71,7 +71,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-inclind-panic-button.php';
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.0.0
+ * @since    1.0.1
  */
 function run_inclind_panic_button() {
 

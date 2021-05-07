@@ -4,7 +4,7 @@
  * Fired during plugin activation
  *
  * @link       https://www.inclind.com/
- * @since      1.0.0
+ * @since      1.0.1
  *
  * @package    Inclind_Panic_Button
  * @subpackage Inclind_Panic_Button/includes
@@ -15,7 +15,7 @@
  *
  * This class defines all code necessary to run during the plugin's activation.
  *
- * @since      1.0.0
+ * @since      1.0.1
  * @package    Inclind_Panic_Button
  * @subpackage Inclind_Panic_Button/includes
  * @author     Carson Schulz <schulzcarson@gmail.com>
@@ -27,7 +27,7 @@ class Inclind_Panic_Button_Activator {
 	 *
 	 * Long Description.
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.1
 	 */
 	public static function activate() {
 

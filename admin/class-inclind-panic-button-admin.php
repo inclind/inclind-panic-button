@@ -4,7 +4,7 @@
  * The admin-specific functionality of the plugin.
  *
  * @link       https://www.inclind.com/
- * @since      1.0.0
+ * @since      1.0.1
  *
  * @package    Inclind_Panic_Button
  * @subpackage Inclind_Panic_Button/admin
@@ -25,7 +25,7 @@ class Inclind_Panic_Button_Admin {
 	/**
 	 * The ID of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.1
 	 * @access   private
 	 * @var      string    $plugin_name    The ID of this plugin.
 	 */
@@ -34,7 +34,7 @@ class Inclind_Panic_Button_Admin {
 	/**
 	 * The version of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.1
 	 * @access   private
 	 * @var      string    $version    The current version of this plugin.
 	 */
@@ -43,7 +43,7 @@ class Inclind_Panic_Button_Admin {
 	/**
 	 * Initialize the class and set its properties.
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.1
 	 * @param      string    $plugin_name       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
@@ -57,7 +57,7 @@ class Inclind_Panic_Button_Admin {
 	/**
 	 * Register settings
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.1
 	 */
 	public function register_settings() {
 
@@ -111,7 +111,7 @@ class Inclind_Panic_Button_Admin {
 	/**
 	 * Section field
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.1
 	 */
 	public function create_entry_section( $arg ) {
 		echo '<p>Here are the settings for the Inclind Panic Button. Do note that only valid URLs can be entered for the panic button URL.</p>';
@@ -120,7 +120,7 @@ class Inclind_Panic_Button_Admin {
 	/**
 	 * Button text field
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.1
 	 */
 	public function button_text_field( $arg ) {
 		$options = get_option( 'inclind_panic_button_settings' );
@@ -134,7 +134,7 @@ class Inclind_Panic_Button_Admin {
 	/**
 	 * Redirect URL field
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.1
 	 */
 	public function redirect_url_field( $arg ) {
 		$options = get_option( 'inclind_panic_button_settings' );
@@ -148,7 +148,7 @@ class Inclind_Panic_Button_Admin {
 	/**
 	 * Button fixed field
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.1
 	 */
 	public function button_fixed_field( $arg ) {
 		$options = get_option( 'inclind_panic_button_settings' );
@@ -162,7 +162,7 @@ class Inclind_Panic_Button_Admin {
 	/**
 	 * Validate all the fields
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.1
 	 */
 	public function validate_fields( $input ) {
 		$output['inclind_panic_button_text'] = sanitize_text_field( $input['inclind_panic_button_text'] );
@@ -174,7 +174,7 @@ class Inclind_Panic_Button_Admin {
 	/**
 	 * Add a settings page
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.1
 	 */
 	public function add_settings_page() {
 		add_options_page(
@@ -189,7 +189,7 @@ class Inclind_Panic_Button_Admin {
 	/**
 	 * Register a settings page
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.1
 	 */
 	public function build_settings_page() {
 		?>
