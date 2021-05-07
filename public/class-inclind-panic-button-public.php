@@ -55,7 +55,7 @@ class Inclind_Panic_Button_Public {
 	}
 
 	/**
-	 * Register the stylesheets for the public-facing side of the site.
+	 * Create the shortcode to be used by the end user
 	 *
 	 * @since    1.0.0
 	 */
