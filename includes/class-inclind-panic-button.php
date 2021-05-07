@@ -154,6 +154,9 @@ class Inclind_Panic_Button {
 
 		$plugin_admin = new Inclind_Panic_Button_Admin( $this->get_plugin_name(), $this->get_version() );
 
+		$this->loader->add_action( 'admin_init', $plugin_admin, 'register_settings' );
+		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_settings_page' );
+
 	}
 
 	/**

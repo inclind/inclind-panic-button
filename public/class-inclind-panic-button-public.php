@@ -61,6 +61,10 @@ class Inclind_Panic_Button_Public {
 	 */
 	public function create_shortcode( $args ) {
 
+		// Get the options from the settings page
+		$settings = get_option( 'inclind_panic_button_settings' );
+		var_dump( $settings );
+
 		// Default values
 		$text = __( 'Exit', 'inclind-panic-button' );
 		$redirect_url = 'https://www.google.com';     // Where should we send them? Default is Google
@@ -69,18 +73,27 @@ class Inclind_Panic_Button_Public {
 			'inclind-panic-button'
 		];
 
-		// Lets process any arguments if we have them
+		// Process the user settings if we have them
+		if ( $settings ) {
+
+			// Button Text
+			if ( array_key_exists( 'inclind_panic_button_text', $settings ) ) {
+				if ( $settings['inclind_panic_button_text'] ) {
+					$text = $settings['inclind_panic_button_text'];
+				}
+			}
+
+			// Redirect URL
+			if ( array_key_exists( 'inclind_panic_button_url_field', $settings ) ) {
+				if ( $settings['inclind_panic_button_url_field'] ) {
+					$redirect_url = $settings['inclind_panic_button_url_field'];
+				}
+			}
+
+		}
+
+		// Lets process any shortcode arguments if we have them
 		if ( $args ) {
-
-			// Handle the text
-			if ( array_key_exists( 'text', $args ) ) {
-				$text = esc_html( $args['text'] );
-			}
-
-			// If there is a redirect location
-			if ( array_key_exists( 'location', $args ) ) {
-				$redirect_url = esc_url( $args['location'] );
-			}
 
 			// If the user does not want the default class we can accomodate
 			if ( array_key_exists( 'default_class', $args ) ) {
@@ -97,6 +110,7 @@ class Inclind_Panic_Button_Public {
 					$classes[] = esc_attr( $class );
 				}
 			}
+
 		}
 
 		// Combine the classes
