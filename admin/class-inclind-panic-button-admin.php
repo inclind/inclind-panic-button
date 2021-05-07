@@ -125,9 +125,9 @@ class Inclind_Panic_Button_Admin {
 	public function button_text_field( $arg ) {
 		$options = get_option( 'inclind_panic_button_settings' );
 		printf(
-		  '<input type="text" name="%s" value="%s" />',
-		  esc_attr( 'inclind_panic_button_settings[inclind_panic_button_text]' ),
-		  esc_attr( $options['inclind_panic_button_text'] )
+			'<input type="text" name="%s" value="%s" />',
+			esc_attr( 'inclind_panic_button_settings[inclind_panic_button_text]' ),
+			esc_attr( $options['inclind_panic_button_text'] )
 		);
 	}
 
@@ -139,9 +139,9 @@ class Inclind_Panic_Button_Admin {
 	public function redirect_url_field( $arg ) {
 		$options = get_option( 'inclind_panic_button_settings' );
 		printf(
-		  '<input type="url" name="%s" value="%s" />',
-		  esc_attr( 'inclind_panic_button_settings[inclind_panic_button_url_field]' ),
-		  esc_attr( $options['inclind_panic_button_url_field'] )
+			'<input type="url" name="%s" value="%s" />',
+			esc_attr( 'inclind_panic_button_settings[inclind_panic_button_url_field]' ),
+			esc_attr( $options['inclind_panic_button_url_field'] )
 		);
 	}
 
@@ -153,9 +153,9 @@ class Inclind_Panic_Button_Admin {
 	public function button_fixed_field( $arg ) {
 		$options = get_option( 'inclind_panic_button_settings' );
 		printf(
-		  '<input type="checkbox" name="%s" value="1" %s />',
-		  esc_attr( 'inclind_panic_button_settings[inclind_panic_button_show_fixed]' ),
-		  checked( 1, $options['inclind_panic_button_show_fixed'], false )
+			'<input type="checkbox" name="%s" value="1" %s />',
+			esc_attr( 'inclind_panic_button_settings[inclind_panic_button_show_fixed]' ),
+			checked( 1, $options['inclind_panic_button_show_fixed'], false )
 		);
 	}
 
