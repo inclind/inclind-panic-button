@@ -12,7 +12,7 @@ try {
 }
 
 // Setup the file to stream
-const output = fs.createWriteStream('release/' + packageName + '.' + version + '.zip');
+const output = fs.createWriteStream('./' + packageName + '.' + version + '.zip');
 const archive = archiver('zip', {
 	zlib: { level: 9 } // Sets the compression level.
 });
@@ -28,7 +28,7 @@ output.on('end', function() {
 output.on('close', function () {
 	console.log(archive.pointer() + ' total bytes');
 	console.log('archiver has been finalized and the output file descriptor has closed.');
-	console.log('File can be found @ ./release/'  + packageName + '.' + version + '.zip');
+	console.log('File can be found @ ./'  + packageName + '.' + version + '.zip');
 	console.log('\x1b[33m%s\x1b[0m', 'PLEASE DO NOT COMMIT THE ZIP');
 });
 
