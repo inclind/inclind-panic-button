@@ -51,7 +51,6 @@ archive.on('error', function(err) {
 archive.pipe(output);
 
 // What to grab
-archive.directory('acf-json', packageNameDir + 'acf-json');
 archive.directory('admin', packageNameDir + 'admin');
 archive.directory('includes', packageNameDir + 'includes');
 archive.directory('languages', packageNameDir + 'languages');

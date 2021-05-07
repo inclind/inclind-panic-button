@@ -80,11 +80,3 @@ function run_inclind_panic_button() {
 
 }
 run_inclind_panic_button();
-
-// Make sure that we load our local fields
-add_filter('acf/settings/load_json', 'inclind_panic_button_acf_json_load_point');
-
-function inclind_panic_button_acf_json_load_point( $paths ) {
-	$paths[] = WP_CONTENT_DIR . '/plugins/inclind-panic-button/acf-json';
-	return $paths;
-}

@@ -53,21 +53,4 @@ class Inclind_Panic_Button_Admin {
 		$this->version = $version;
 
 	}
-
-	/**
-	 * Checks to see if ACF is installed, if not we need to notify the user
-	 *
-	 * @since    1.0.0
-	 */
-	public function acf_check() {
-
-		if ( ! class_exists( 'ACF' ) ) {
-			$class = 'notice notice-warning is-dismissible';
-			$message = __( 'The Inclind Panic Button requires that ACF Pro is installed and activated for customization. If not, default customization will be used.', 'inclind-panic-button' );
-		}
-
-		printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
-
-	}
-
 }

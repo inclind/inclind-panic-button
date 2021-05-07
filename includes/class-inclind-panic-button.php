@@ -154,8 +154,6 @@ class Inclind_Panic_Button {
 
 		$plugin_admin = new Inclind_Panic_Button_Admin( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'admin_notices', $plugin_admin, 'acf_check' );
-
 	}
 
 	/**

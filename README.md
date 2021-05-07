@@ -2,8 +2,6 @@
 
 `inclind-panic-button` is a WordPress plugin that was developed for niche need of non-profit agencies to have a quick exit button available for special use cases such as information regarding abuse, assault, and more. This allows users to quickly hide what they were looking at even in the event of an internet disconnection or loss of cell service.
 
-**ACF is not required for plugin operation, however it contains default config for frontend users.**
-
 ## Installation
 
 For general WordPress installation:
